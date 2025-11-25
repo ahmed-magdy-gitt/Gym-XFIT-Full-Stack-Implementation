@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- dynamic -->
+        <title>Product1</title>
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="product.css" />
+        <!-- font awoesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        />
+    </head>
+    <body>
+        <!-- msg -->
+        <div id="msg" class="msg">
+            <div class="alert fade alert-simple alert-success alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show">
+                <button type="button" class="close font__size-18" id="alertDismissBtn">
+                        <span aria-hidden="true">
+                            <a>
+                                <i class="fa fa-times greencross"></i>
+                            </a>
+                        </span>
+                        <span class="sr-only">Close</span> 
+                </button>
+                <i class="start-icon far fa-check-circle faa-tada animated"></i>
+                <strong class="font__weight-semibold">Done!</strong> <span id="msgContent">Message content.</span>
+            </div>
+        </div>
+
+        <!-- Products Cart -->
+        <div class="overlay"></div>
+        <div class="cart">
+            <h1>Cart <i class="fa fa-shopping-cart"></i></h1>
+            <ul class="listCart"></ul>
+            <div class="checkOut">
+                <div class="total">0</div>
+                <div class="closeShopping">Close</div>
+            </div>
+        </div>
+
+        <!-- Product Card -->
+        <div class="card">
+            <div class="left">
+                <!-- dynamic -->
+                <img
+                    id="productImage"
+                    src=""
+                    alt="product image"
+                />
+            </div>
+            <div class="right">
+                <div class="product-info">
+                    <div class="product-header">
+                        <!-- dynamic -->
+                        <!-- product name -->
+                        <div class="product-name">
+                            <h1 id="productName">Product Name</h1>
+                        </div>
+                        <div class="header-options">
+                            <!-- btns -->
+                            <a href="/store.html"><i class="fa fa-home"></i></a>
+                            <i id="loginBtn" class="fa fa-user"></i>
+                            
+                            <div class="shopping">
+                                <i id="showCart" class="fa fa-shopping-cart"></i>
+                                <span class="quantity">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <!-- dynamic -->
+                        <!-- product type -->
+                        <h3 id="productType">Product Type</h3>
+                        <!-- dynamic -->
+                        <!-- product details -->
+                        <h2 id="productDetails">Product Details.</h2>
+                        <!-- price -->
+                        <h4 id="productPrice">Product Price EGP</h4>
+                        <!-- old price -->
+                        <h4 id="productOldPrice" class="discount">Old Price</h4>
+                    </div>
+                    <!-- btns -->
+                    <span class="footer-buttons" id="buyBtn"><i class="fa fa-shopping-bag"></i>Buy Now</span>
+                    <span class="footer-buttons" id="addToCart"><i class="fa fa-shopping-cart"></i>Add TO Cart</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- JQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Custom Script -->
+        <script src="product.js"></script>
+    </body>
+</html>

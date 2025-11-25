@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XFIT</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- !NOTE: my style overrides bootstrap style -->
+    <link rel="stylesheet" href="store.css">
+</head>
+<body>
+    <!-- Background Music -->
+    <audio autoplay loop id="backgroundMusic">
+        <source src="audio/Convergence.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+        
+    <div class="landing-bg"></div>
+    <section id="store" class="store">
+        <!-- Header -->
+        <header>
+            <a href="/store.html" class="logo">XFIT</a>
+            <div class="toggleMenu"></div>
+            <ul class="navigation">
+                <li><a href="#equipments" data-replace="GYM Gear"><span>equipments</span></a></li>
+                <li><a href="#supplements" data-replace="supplements"><span>supplements</span></a></li>
+                <li><a href="#apparels" data-replace="cloth"><span>apparels</span></a></li>
+                <li><a href="#accessories" data-replace="accessories"><span>accessories</span></a></li>
+                <li><a href="#xfitvideo" data-replace="Us"><span>XFIT</span></a></li>
+                <button class="audio-controller btn">
+                    <svg style="display: block; color:#ccc;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-volume-up-fill" viewBox="0 0 16 16">
+                        <path d="M11.536 14.01A8.47 8.47 0 0 0 14.026 8a8.47 8.47 0 0 0-2.49-6.01l-.708.707A7.48 7.48 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303z"/>
+                        <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.48 5.48 0 0 1 11.025 8a5.48 5.48 0 0 1-1.61 3.89z"/>
+                        <path d="M8.707 11.182A4.5 4.5 0 0 0 10.025 8a4.5 4.5 0 0 0-1.318-3.182L8 5.525A3.5 3.5 0 0 1 9.025 8 3.5 3.5 0 0 1 8 10.475zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06"/>
+                    </svg>
+                    <svg style="display: none; color:#ccc;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-volume-mute-fill" viewBox="0 0 16 16">
+                        <path d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06m7.137 2.096a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0"/>
+                    </svg>
+                </button>
+                <button class="mode-controller btn">
+                    <!-- controls dark/light mode -->
+                    <svg style="display: block; color:#ccc;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
+                        <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+                    </svg>
+                    <svg style="display: none; color:#ccc;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+                        <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+                    </svg>
+                </button>
+            </ul>
+        </header>
+        <!-- /Header -->
+        <!-- Content -->
+        <div class="container">
+            <!-- Equipments -->
+            <span id="equipments" class="main-title">equipments</span>
+            <div class="row w-100 flex-row-reverse">
+                <div class="card">
+                    <div class="imgBox">
+                        <img src="images/products/1.png" alt="Product Image" class="prodImage">
+                    </div>
+                    <div class="contentBox">
+                        <h3>Superman Dumbbell Set</h3>
+                        <h2 class="price">87750.<small>00</small> EGP</h2>
+                        <div class="buy"><a href="/product.html?id=1">Buy Now</a></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBox">
+                        <img src="images/products/2.png" alt="Product Image" class="prodImage">
+                    </div>
+                    <div class="contentBox">
+                        <h3>Super Olympic Hex Bar</h3>
+                        <h2 class="price">6900.<small>00</small> EGP</h2>
+                        <div class="buy"><a href="/product.html?id=2">Buy Now</a></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBox">
+                        <img src="images/products/3.png" alt="Product Image" class="prodImage">
+                    </div>
+                    <div class="contentBox">
+                        <h3>Lifting Bar</h3>
+                        <h2 class="price">4200.<small>00</small> EGP</h2>
+                        <div class="buy"><a href="/product.html?id=3">Buy Now</a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Equipments -->
+
+            <!-- Supplements -->
+            <span id="supplements" class="main-title hideme">supplements</span>
+            <div class="row w-100">            
+                <div class="card right hideme">
+                    <div class="imgBox">
+                        <img src="images/products/4.png" alt="Product Image" class="prodImage">
+                    </div>
+                    <div class="contentBox">
+                        <h3>Fat Burners</h3>
+                        <h2 class="price">3500.<small>00</small> EGP</h2>
+                        <div class="buy"><a href="/product.html?id=4">Buy Now</a></div>
+                    </div>
+                </div>
+
+                <div class="card hideme">
+                    <div class="imgBox">
+                        <img src="images/products/5.png" alt="Product Image" class="prodImage">
+                    </div>
+                    <div class="contentBox">
+                        <h3>Bpi Sports Cla + Carnitine 50 Servings</h3>
+                        <h2 class="price">1750.<small>00</small> EGP</h2>
+                        <div class="buy"><a href="/product.html?id=5">Buy Now</a></div>
+                    </div>
+                </div>
+                <div class="card left hideme">
+                    <div class="imgBox">
+                        <img src="images/products/6.png" alt="Product Image" class="prodImage">
+                    </div>
+                    <div class="contentBox">
+                        <h3>Cloma Pharma Black Spider 100 Capsules</h3>
+                        <h2 class="price">1550.<small>00</small> EGP</h2>
+                        <div class="buy"><a href="/product.html?id=6">Buy Now</a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Supplements -->
+
+            <!-- Apparels -->
+            <span id="apparels" class="main-title hideme">apparels</span>
+            <div class="row w-100 flex-row-reverse">
+                <div class="card right hideme">
+                    <div class="imgBox">
+                        <img src="images/products/7.png" alt="Product Image" class="prodImage">
+                    </div>
+                    <div class="contentBox">
+                        <h3>RAW CUT OFF BAR-BASIC TANK</h3>
+                        <h2 class="price">455.<small>00</small> EGP</h2>
+                        <div class="buy"><a href="/product.html?id=7">Buy Now</a></div>
+                    </div>
+                </div>
+                <div class="card hideme">
+                    <div class="imgBox">
+                        <img src="images/products/8.png" alt="Product Image" class="prodImage">
+                    </div>
+                    <div class="contentBox">
+                        <h3>ULTRA RAGLAN T-SHIRT</h3>
+                        <h2 class="price">486.<small>00</small> EGP</h2>
+                        <div class="buy"><a href="/product.html?id=8">Buy Now</a></div>
+                    </div>
+                </div>
+                <div class="card left hideme">
+                    <div class="imgBox">
+                        <img src="images/products/9.png" alt="Product Image" class="prodImage">
+                    </div>
+                    <div class="contentBox">
+                        <h3>ULTRA-CAMO VENTED TANK [LIMITED QUANTITIES]</h3>
+                        <h2 class="price">486.<small>00</small> EGP</h2>
+                        <div class="buy"><a href="/product.html?id=9">Buy Now</a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Apparels -->
+
+            <!-- Accessories -->
+            <span id="accessories" class="main-title hideme">accessories</span>
+            <div class="row w-100">
+                <div class="card right hideme">
+                    <div class="imgBox">
+                        <img src="images/products/10.png" alt="Product Image" class="prodImage">
+                    </div>
+                    <div class="contentBox">
+                        <h3>Aolikes Carpal Tunnel Wrist Brace</h3>
+                        <h2 class="price">250.<small>00</small> EGP</h2>
+                        <div class="buy"><a href="/product.html?id=10">Buy Now</a></div>
+                    </div>
+                </div>
+                <div class="card hideme">
+                    <div class="imgBox">
+                        <img src="images/products/11.png" alt="Product Image" class="prodImage">
+                    </div>
+                    <div class="contentBox">
+                        <h3>3M Adjustable Wrist Support - Black</h3>
+                        <h2 class="price">99.<small>00</small> EGP</h2>
+                        <div class="buy"><a href="/product.html?id=11">Buy Now</a></div>
+                    </div>
+                </div>
+                <div class="card left hideme">
+                    <div class="imgBox">
+                        <img src="images/products/12.png" alt="Product Image" class="prodImage">
+                    </div>
+                    <div class="contentBox">
+                        <h3>Men Chest Handbag</h3>
+                        <h2 class="price">549.<small>55</small> EGP</h2>
+                        <div class="buy"><a href="/product.html?id=12">Buy Now</a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Accessories -->
+            <!-- Demonstration Video -->
+            <span id="xfitvideo" class="main-title hideme">XFIT</span>
+            <div class="row video-container hideme">
+                <video controls width="500" height="500">
+                    <source src="video/video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <!-- /Demonstration Video -->
+        </div>
+        <!-- /Content -->
+    </section>
+    <div class="footer">
+        <!-- Social links -->
+        <ul class="social">
+            <li><a href="web.facebook.com/XFIT"><img src="images/facebook.png" alt="Facebook page"></a></li>
+            <li><a href="instagram.com/XFIT"><img src="images/instagram.png" alt="instagram page"></a></li>
+            <li><a href="twitter.com/XFIT"><img src="images/twitter.png" alt="twitter page"></a></li>
+        </ul>
+
+        <div class="copyright"></div>
+        <!-- /Social links -->
+    </div>
+
+    <!-- JQuery & Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom Script -->
+    <script src="store.js"></script>
+</body>
+</html>
